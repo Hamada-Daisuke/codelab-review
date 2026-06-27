@@ -2,4 +2,4 @@
 
 echo "Running Review Validation..."
 
-bash scripts/validate-review.sh
+bash tooling/validate-review.sh
