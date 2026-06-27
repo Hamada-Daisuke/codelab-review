@@ -1,0 +1,54 @@
+name: Validate Review Repository
+
+on:
+  pull_request:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch history
+        run: git fetch origin main
+
+      - name: Detect changed files
+        id: files
+        run: |
+          git diff --name-only origin/main...HEAD > changed.txt
+
+      - name: Validate
+        run: |
+
+          cat changed.txt
+
+          if grep "^curriculum/" changed.txt > /dev/null; then
+
+            if ! grep "^CHANGELOG.md$" changed.txt > /dev/null; then
+
+              echo "CHANGELOG.md must be updated."
+
+              exit 1
+
+            fi
+
+          fi
+
+          if grep "^common/" changed.txt > /dev/null; then
+
+            if ! grep "^CHANGELOG.md$" changed.txt > /dev/null; then
+
+              echo "CHANGELOG.md must be updated."
+
+              exit 1
+
+            fi
+
+          fi
+
+          echo "Validation Passed"

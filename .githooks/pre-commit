@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Running Review Validation..."
+
+bash scripts/validate-review.sh
+
+chmod +x .githooks/pre-commit
+chmod +x scripts/validate-review.sh
+
+git config core.hooksPath .githooks

@@ -1,0 +1,12 @@
+{
+  // ファイル保存時に自動でフォーマット
+  "editor.formatOnSave": true,
+  // フォーマッタを指定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 改行コードの規定値
+  "files.eol": "\n",
+  // ファイル保存時に行末に改行を挿入
+  "files.insertFinalNewline": true,
+  // ファイル保存時に最終行以降の空行を削除
+  "files.trimFinalNewlines": true,
+}

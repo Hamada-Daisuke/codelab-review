@@ -1,0 +1,24 @@
+rules:
+  - name: Curriculum
+    paths:
+      - "curriculum/**"
+    require:
+      - "CHANGELOG.md"
+
+  - name: Common
+    paths:
+      - "common/**"
+    require:
+      - "CHANGELOG.md"
+
+  - name: Faq
+    paths:
+      - "faq/**"
+    require:
+      - "CHANGELOG.md"
+
+  - name: Template
+    paths:
+      - "template/**"
+    require:
+      - "CHANGELOG.md"
