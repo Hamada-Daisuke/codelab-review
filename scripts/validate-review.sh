@@ -12,7 +12,7 @@ if echo "$changed_files" | grep -q "^curriculum/"; then
 
   if ! echo "$changed_files" | grep -q "^CHANGELOG.md$"; then
     echo ""
-    echo "✕ curriculum を変更した場合は CHANGELOG.md を更新してください。"
+    echo "❌ curriculum を変更した場合は CHANGELOG.md を更新してください。"
     exit 1
   fi
 fi
