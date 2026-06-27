@@ -17,7 +17,7 @@ echo ""
 echo "Grant execute permission..."
 
 chmod +x .githooks/pre-commit
-chmod +x scripts/validate-review.sh
+chmod +x tooling/validate-review.sh
 
 echo "Done."
 
